@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wishline — Creative Digital Agency. Pengalaman digital yang layak dikenang.">
+  <title>WISHLINE — Creative Digital Agency</title>
+
+  <link rel="icon" type="image/png" href="images/wisline.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wishblack: '#0d0d0f',
+            wishcream: '#f1ecdf',
+            wishgold: '#b88b4a'
+          },
+          fontFamily: {
+            serifWish: ['Georgia', 'Times New Roman', 'serif'],
+            sansWish: ['Inter', 'Arial', 'Helvetica', 'sans-serif'],
+            pacifico: ['Pacifico', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+  
+</head>
+
+<body class="m-0 bg-wishblack text-wishcream font-sansWish leading-relaxed">
+
+  <!-- Scroll progress -->
+  <div class="fixed left-0 top-0 z-[60] h-[2px] w-full">
+    <span id="progress" class="block h-full w-0 bg-wishgold"></span>
+  </div>
+
+  <!-- Navbar -->
+  <header id="navbar"
+    class="fixed left-0 right-0 top-0 z-50 flex h-16 md:h-[76px] items-center justify-between border-b border-white/5 bg-wishblack/80 px-[5vw] backdrop-blur-xl">
+    <a href="#home" class=" h-15">
+      <img src="/images/wishline.png" alt="Wishline" class="h-8 md:h-12">
+    </a>
+
+    <nav id="desktop-nav" class="hidden items-center gap-7 md:flex">
+      <a href="#about" class="text-[9px] tracking-[1.5px] text-[#aaa39a] transition hover:text-wishgold">Tentang</a>
+      <a href="#services" class="text-[9px] tracking-[1.5px] text-[#aaa39a] transition hover:text-wishgold">Layanan</a>
+      <a href="#process" class="text-[9px] tracking-[1.5px] text-[#aaa39a] transition hover:text-wishgold">Proses</a>
+      <a href="#works" class="text-[9px] tracking-[1.5px] text-[#aaa39a] transition hover:text-wishgold">Karya</a>
+      <a href="#contact" class="text-[9px] tracking-[1.5px] text-[#aaa39a] transition hover:text-wishgold">Kontak</a>
+    </nav>
+
+    <a href="#contact" class="hidden text-[9px] tracking-[1.5px] text-wishgold md:block">
+      Mari bekerja sama <span class="ml-2 text-sm">↗</span>
+    </a>
+
+    <button id="menu"
+      aria-label="Buka menu"
+      class="flex flex-col gap-1 md:hidden">
+      <i class="block h-px w-6 bg-wishcream"></i>
+      <i class="block h-px w-6 bg-wishcream"></i>
+    </button>
+
+    <nav id="mobile-nav"
+      class="absolute right-[5vw] top-16 hidden flex-col gap-5 border border-white/10 bg-wishblack px-6 py-5 md:hidden">
+      <a href="#about" class="text-[10px] tracking-widest">Tentang</a>
+      <a href="#services" class="text-[10px] tracking-widest">Layanan</a>
+      <a href="#process" class="text-[10px] tracking-widest">Proses</a>
+      <a href="#works" class="text-[10px] tracking-widest">Karya</a>
+      <a href="#contact" class="text-[10px] tracking-widest">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="home" class="relative flex min-h-screen items-center overflow-hidden bg-wishblack px-[9vw] pb-24 pt-28">
+      <div class="absolute bottom-0 left-[7.2%] top-0 w-px bg-white/[0.09]">
+        <span class="absolute left-[-2px] top-[8%] h-[5px] w-[5px] rounded-full bg-wishgold"></span>
+      </div>
+
+      <div class="pointer-events-none absolute right-[-16vw] top-[10vh] h-[48vw] w-[48vw] rounded-full border border-wishgold/[0.14]"></div>
+      <div class="pointer-events-none absolute right-0 top-[26vh] h-[28vw] w-[28vw] rounded-full border border-wishgold/[0.14]"></div>
+
+      <div class="relative z-10 ml-0 max-w-5xl md:ml-[3vw]">
+        <p class="mb-7 font-serifWish text-xs italic tracking-wide text-wishgold">
+          PENGALAMAN DIGITAL YANG LAYAK DIKENANG.
+        </p>
+
+        <h1 class="font-serifWish text-[20vw] font-normal leading-[0.8] tracking-[-5px] sm:text-[16vw] md:text-[14vw] md:tracking-[-9px]">
+          WISH<span>LINE</span>
+        </h1>
+
+        <div class="mt-7 h-[2px] w-20 bg-wishgold"></div>
+
+        <p class="mt-8 max-w-xl text-sm text-[#a39d93]">
+          Kami merangkai strategi, kreativitas, pengalaman, dan teknologi
+          menjadi website yang punya karakter.
+        </p>
+      </div>
+
+      <a href="#manifesto"
+        class="absolute bottom-8 right-[8vw] text-[8px] tracking-[2px] text-wishgold">
+        SCROLL TO EXPLORE <span class="ml-2 text-sm">↓</span>
+      </a>
+
+      <div class="absolute bottom-8 left-[9vw] right-[9vw] flex justify-between text-[8px] tracking-[3px] text-[#8f8a80]">
+        <span>WISHLINE.STUDIO</span><span>01 — 15</span>
+      </div>
+    </section>
+
+    <!-- MANIFESTO -->
+    <section id="manifesto" class="relative min-h-screen overflow-hidden bg-wishblack px-[9vw] pb-24 pt-28">
+      <div class="absolute bottom-0 left-[7.2%] top-0 w-px bg-white/[0.09]"></div>
+      <div class="absolute left-[9vw] top-8 text-[9px] tracking-[3px] text-wishgold">01 / MANIFESTO</div>
+
+      <div class="max-w-4xl pt-20">
+        <p class="mb-7 text-[9px] tracking-[3px] text-wishgold">PEMBUKA</p>
+        <h2 class="font-serifWish text-[clamp(50px,7vw,105px)] font-normal leading-[0.98] tracking-[-2px]">
+          INTERNET SUDAH<br>
+          DIPENUHI<br>
+          <em class="text-wishgold">KEBISINGAN.</em>
+        </h2>
+
+        <div class="mt-12 max-w-xl border-l border-wishgold pl-7 text-sm text-[#9d978d]">
+          <p>Terlalu banyak website yang terlihat sama.<br>
+            Template yang berulang. Desain yang mudah dilupakan sesaat setelah tab-nya ditutup.</p>
+          <p class="mt-7">Wishline hadir untuk mengubah itu.</p>
+        </div>
+      </div>
+
+      <div class="absolute bottom-8 left-[9vw] right-[9vw] flex justify-between text-[8px] tracking-[3px] text-[#8f8a80]">
+        <span>MANIFESTO</span><span>02 — 15</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="relative min-h-screen overflow-hidden bg-wishcream px-[9vw] pb-24 pt-28 text-wishblack">
+      <div class="absolute bottom-0 left-[7.2%] top-0 w-px bg-black/10"></div>
+      <div class="absolute left-[9vw] top-8 text-[9px] tracking-[3px] text-wishgold">02 / PROFIL</div>
+
+      <div class="mx-auto mt-16 grid max-w-6xl gap-10 md:grid-cols-2 md:gap-[10vw]">
+        <div>
+          <p class="mb-7 text-[9px] tracking-[3px] text-wishgold">TENTANG KAMI</p>
+          <h2 class="font-serifWish text-[clamp(38px,5vw,76px)] font-normal leading-none tracking-[-2px]">
+            Kami adalah<br><em class="text-wishgold">Wishline.</em>
+          </h2>
+        </div>
+
+        <div class="text-lg leading-[1.8] text-[#5f5b54]">
+          <p class="mb-7">Wishline adalah creative digital agency yang berfokus pada pembuatan website dengan desain yang tidak hanya berfungsi, tetapi juga memiliki karakter.</p>
+          <p class="mb-7">Kami percaya bahwa website bukan sekadar halaman digital. Website adalah identitas, pengalaman, dan kesan pertama sebuah brand — titik pertemuan antara siapa Anda dan bagaimana dunia mengenal Anda.</p>
+          <blockquote class="my-12 border-l border-wishgold pl-6 font-serifWish text-2xl leading-snug">
+            “Setiap benang cerita brand, kami rangkai menjadi satu pengalaman utuh.”
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="absolute bottom-8 left-[9vw] right-[9vw] flex justify-between text-[8px] tracking-[3px] text-[#716d65]">
+        <span>PROFILE</span><span>03 — 15</span>
+      </div>
+    </section>
+
+    <!-- VISION -->
+    <section class="relative flex min-h-screen items-center overflow-hidden bg-wishblack px-[9vw] pb-24 pt-28">
+      <div class="absolute bottom-0 left-[7.2%] top-0 w-px bg-white/[0.09]"></div>
+      <div class="absolute left-[9vw] top-8 text-[9px] tracking-[3px] text-wishgold">03 / VISI</div>
+
+      <div class="mx-auto max-w-5xl text-center">
+        <p class="mb-7 text-[9px] tracking-[3px] text-wishgold">VISI</p>
+        <h2 class="font-serifWish text-[clamp(40px,5vw,72px)] font-normal leading-tight tracking-[-2px]">
+          Menciptakan ruang digital<br>
+          yang lebih <em class="text-wishgold">original, kreatif,<br>dan berani tampil berbeda.</em>
+        </h2>
+
+        <div class="mx-auto mt-16 max-w-2xl border-t border-wishgold/25 pt-6 text-left">
+          <span class="text-[9px] tracking-[3px] text-wishgold">PRINSIP</span>
+          <p class="mt-5 font-serifWish text-2xl">“Membasmi semua website yang unoriginal dan tidak kreatif.”</p>
+          <small class="text-[#817c73]">Kalimat ini bukan slogan basa-basi — ini adalah alasan Wishline berdiri.</small>
+        </div>
+      </div>
+
+      <div class="absolute bottom-8 left-[9vw] right-[9vw] flex justify-between text-[8px] tracking-[3px] text-[#8f8a80]">
+        <span>VISION</span><span>04 — 15</span>
+      </div>
+    </section>
+
+    <!-- MISSION -->
+    <section class="relative min-h-screen overflow-hidden bg-wishcream px-[9vw] pb-24 pt-28 text-wishblack">
+      <div class="absolute bottom-0 left-[7.2%] top-0 w-px bg-black/10"></div>
+      <div class="absolute left-[9vw] top-8 text-[9px] tracking-[3px] text-wishgold">04 / MISI</div>
+
+      <div class="mt-16 max-w-4xl">
+        <p class="mb-7 text-[9px] tracking-[3px] text-wishgold">MISI</p>
+        <h2 class="font-serifWish text-[clamp(38px,5vw,76px)] font-normal leading-none">Yang kami perjuangkan.</h2>
+      </div>
+
+      <div class="mt-14 grid max-w-6xl border-t border-black/10 md:grid-cols-3">
+        <article class="border-b border-black/10 py-8 md:border-b-0 md:border-r md:pr-8">
+          <b class="text-[10px] tracking-[2px] text-wishgold">01</b>
+          <h3 class="mt-6 font-serifWish text-2xl">Website Sebagai Karya Seni</h3>
+          <p class="mt-3 text-sm text-[#716d65]">Kami percaya desain digital dapat menjadi media ekspresi yang memiliki cerita, karakter, dan emosi — bukan sekadar susunan elemen di layar.</p>
+        </article>
+        <article class="border-b border-black/10 py-8 md:border-b-0 md:border-r md:px-8">
+          <b class="text-[10px] tracking-[2px] text-wishgold">02</b>
+          <h3 class="mt-6 font-serifWish text-2xl">Dibuat untuk Dikenang</h3>
+          <p class="mt-3 text-sm text-[#716d65]">Kami menciptakan pengalaman visual yang membuat sebuah brand memiliki tempat di ingatan audiensnya, jauh setelah kunjungan pertama berakhir.</p>
+        </article>
+        <article class="py-8 md:pl-8">
+          <b class="text-[10px] tracking-[2px] text-wishgold">03</b>
+          <h3 class="mt-6 font-serifWish text-2xl">Dibangun agar Kembali</h3>
+          <p class="mt-3 text-sm text-[#716d65]">Website yang baik bukan hanya menarik saat pertama kali dilihat, tetapi memberi pengalaman yang membuat pengunjung ingin kembali.</p>
+        </article>
+      </div>
+
+      <div class="absolute bottom-8 left-[9vw] right-[9vw] flex justify-between text-[8px] tracking-[3px] text-[#716d65]">
+        <span>MISSION</span><span>05 — 15</span>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="relative min-h-screen overflow-hidden bg-wishblack px-[9vw] pb-24 pt-28">
+      <div class="absolute bottom-0 left-[7.2%] top-0 w-px bg-white/[0.09]"></div>
+      <div class="absolute left-[9vw] top-8 text-[9px] tracking-[3px] text-wishgold">05 / MASALAH</div>
+
+      <div class="mt-16 max-w-4xl">
+        <p class="mb-7 text-[9px] tracking-[3px] text-wishgold">MASALAHNYA</p>
+        <h2 class="font-serifWish text-[clamp(48px,7vw,100px)] font-normal leading-none tracking-[-2px]">
+          WEBSITE ANDA<br>SEHARUSNYA<br><em class="text-wishgold">BERBUAT LEBIH.</em>
+        </h2>
+      </div>
+
+      <div class="my-16 max-w-5xl border-t border-white/10">
+        <p class="border-b border-white/10 py-5 text-sm text-[#aaa49a]"><span class="mr-6 text-[9px] tracking-[2px] text-wishgold">01</span>Website terlihat seperti template — bisa jadi milik siapa saja.</p>
+        <p class="border-b border-white/10 py-5 text-sm text-[#aaa49a]"><span class="mr-6 text-[9px] tracking-[2px] text-wishgold">02</span>Desain tidak mencerminkan identitas brand yang sesungguhnya.</p>
+        <p class="border-b border-white/10 py-5 text-sm text-[#aaa49a]"><span class="mr-6 text-[9px] tracking-[2px] text-wishgold">03</span>User datang, melihat sebentar, lalu pergi tanpa kesan.</p>
+        <p class="border-b border-white/10 py-5 text-sm text-[#aaa49a]"><span class="mr-6 text-[9px] tracking-[2px] text-wishgold">04</span>Website sulit dibedakan dari kompetitor di industri yang sama.</p>
+        <p class="border-b border-white/10 py-5 text-sm text-[#aaa49a]"><span class="mr-6 text-[9px] tracking-[2px] text-wishgold">05</span>Brand punya produk yang bagus, tapi pengalaman digitalnya biasa saja.</p>
+      </div>
+
+      <blockquote class="max-w-2xl border-l border-wishgold pl-6 font-serifWish text-2xl">
+        “Jika brand Anda berbeda, website Anda seharusnya tidak terlihat seperti yang lain.”
+      </blockquote>
+
+      <div class="absolute bottom-8 left-[9vw] right-[9vw] flex justify-between text-[8px] tracking-[3px] text-[#8f8a80]">
+        <span>PROBLEM</span><span>06 — 15</span>
+      </div>
+    </section>
+
+    <!-- ADVANTAGES -->
+    <section class="relative min-h-screen overflow-hidden bg-wishcream px-[9vw] pb-24 pt-28 text-wishblack">
+      <div class="absolute bottom-0 left-[7.2%] top-0 w-px bg-black/10"></div>
+      <div class="absolute left-[9vw] top-8 text-[9px] tracking-[3px] text-wishgold">06 / KEUNGGULAN</div>
+
+      <div class="mt-16 max-w-4xl">
+        <p class="mb-7 text-[9px] tracking-[3px] text-wishgold">KENAPA WISHLINE</p>
+        <h2 class="font-serifWish text-[clamp(38px,5vw,76px)] font-normal leading-none">
+          Bukan sekadar membuat<br>website yang <em class="text-wishgold">“bagus”.</em>
+        </h2>
+        <p class="mt-7 max-w-xl text-[#706b62]">Kami menggabungkan empat disiplin di setiap project — dijalin menjadi satu benang yang sama.</p>
+      </div>
+
+      <div class="mt-14 grid max-w-6xl border border-black/10 md:grid-cols-2">
+        <article class="min-h-[210px] border-b border-black/10 p-8 md:border-r">
+          <span class="text-[8px] tracking-[2.5px] text-wishgold">STRATEGY</span>
+          <h3 class="mt-5 font-serifWish text-2xl">Strategi</h3>
+          <p class="mt-2 max-w-sm text-sm text-[#716d65]">Memahami brand, target audiens, dan tujuan bisnis sebelum satu piksel pun didesain.</p>
+        </article>
+        <article class="min-h-[210px] border-b border-black/10 p-8">
+          <span class="text-[8px] tracking-[2.5px] text-wishgold">CREATIVITY</span>
+          <h3 class="mt-5 font-serifWish text-2xl">Kreativitas</h3>
+          <p class="mt-2 max-w-sm text-sm text-[#716d65]">Menciptakan visual dan pengalaman yang punya karakter — bukan pengulangan tren.</p>
+        </article>
+        <article class="min-h-[210px] border-b border-black/10 p-8 md:border-b-0 md:border-r">
+          <span class="text-[8px] tracking-[2.5px] text-wishgold">EXPERIENCE</span>
+          <h3 class="mt-5 font-serifWish text-2xl">Pengalaman</h3>
+          <p class="mt-2 max-w-sm text-sm text-[#716d65]">Mendesain perjalanan user yang nyaman, intuitif, dan memorable dari awal hingga akhir.</p>
+        </article>
+        <article class="min-h-[210px] p-8">
+          <span class="text-[8px] tracking-[2.5px] text-wishgold">TECHNOLOGY</span>
+          <h3 class="mt-5 font-serifWish text-2xl">Teknologi</h3>
+          <p class="mt-2 max-w-sm text-sm text-[#716d65]">Mewujudkan desain menjadi website modern, cepat, dan fungsional di setiap perangkat.</p>
+        </article>
+      </div>
+
+      <div class="absolute bottom-8 left-[9vw] right-[9vw] flex justify-between text-[8px] tracking-[3px] text-[#716d65]">
+        <span>ADVANTAGES</span><span>07 — 15</span>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="relative min-h-screen overflow-hidden bg-wishblack px-[9vw] pb-24 pt-28">
+      <div class="absolute bottom-0 left-[7.2%] top-0 w-px bg-white/[0.09]"></div>
+      <div class="absolute left-[9vw] top-8 text-[9px] tracking-[3px] text-wishgold">07 / LAYANAN</div>
+
+      <div class="mt-16 max-w-4xl">
+        <p class="mb-7 text-[9px] tracking-[3px] text-wishgold">LAYANAN</p>
+        <h2 class="font-serifWish text-[clamp(38px,5vw,76px)] font-normal leading-none">Yang kami <em class="text-wishgold">ciptakan.</em></h2>
+      </div>
+
+      <div class="mt-14 max-w-6xl border-t border-white/10">
+        <article class="grid grid-cols-[38px_1fr_20px] gap-3 border-b border-white/10 py-7 md:grid-cols-[70px_1fr_40px] md:gap-8">
+          <span class="text-[9px] tracking-[2px] text-wishgold">01</span>
+          <div><h3 class="font-serifWish text-2xl md:text-3xl">Website Design</h3><p class="mt-1 max-w-2xl text-sm text-[#969087]">Desain website modern yang dibangun berdasarkan karakter dan identitas brand Anda.</p></div>
+          <b class="text-right font-serifWish text-xl text-wishgold">↗</b>
+        </article>
+        <article class="grid grid-cols-[38px_1fr_20px] gap-3 border-b border-white/10 py-7 md:grid-cols-[70px_1fr_40px] md:gap-8">
+          <span class="text-[9px] tracking-[2px] text-wishgold">02</span>
+          <div><h3 class="font-serifWish text-2xl md:text-3xl">Company Profile Website</h3><p class="mt-1 max-w-2xl text-sm text-[#969087]">Website profesional yang membantu perusahaan membangun kredibilitas dan kepercayaan.</p></div>
+          <b class="text-right font-serifWish text-xl text-wishgold">↗</b>
+        </article>
+        <article class="grid grid-cols-[38px_1fr_20px] gap-3 border-b border-white/10 py-7 md:grid-cols-[70px_1fr_40px] md:gap-8">
+          <span class="text-[9px] tracking-[2px] text-wishgold">03</span>
+          <div><h3 class="font-serifWish text-2xl md:text-3xl">Landing Page</h3><p class="mt-1 max-w-2xl text-sm text-[#969087]">Halaman yang dirancang untuk menarik perhatian dan mendorong audiens melakukan aksi.</p></div>
+          <b class="text-right font-serifWish text-xl text-wishgold">↗</b>
+        </article>
+        <article class="grid grid-cols-[38px_1fr_20px] gap-3 border-b border-white/10 py-7 md:grid-cols-[70px_1fr_40px] md:gap-8">
+          <span class="text-[9px] tracking-[2px] text-wishgold">04</span>
+          <div><h3 class="font-serifWish text-2xl md:text-3xl">Creative Web Experience</h3><p class="mt-1 max-w-2xl text-sm text-[#969087]">Website dengan interactive experience, animasi, storytelling, dan visual yang lebih unik.</p></div>
+          <b class="text-right font-serifWish text-xl text-wishgold">↗</b>
+        </article>
+        <article class="grid grid-cols-[38px_1fr_20px] gap-3 border-b border-white/10 py-7 md:grid-cols-[70px_1fr_40px] md:gap-8">
+          <span class="text-[9px] tracking-[2px] text-wishgold">05</span>
+          <div><h3 class="font-serifWish text-2xl md:text-3xl">Website Development</h3><p class="mt-1 max-w-2xl text-sm text-[#969087]">Mengubah desain menjadi website yang cepat, responsive, dan siap digunakan.</p></div>
+          <b class="text-right font-serifWish text-xl text-wishgold">↗</b>
+        </article>
+      </div>
+
+      <div class="absolute bottom-8 left-[9vw] right-[9vw] flex justify-between text-[8px] tracking-[3px] text-[#8f8a80]">
+        <span>SERVICES</span><span>08 — 15</span>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="relative min-h-screen overflow-hidden bg-wishcream px-[9vw] pb-24 pt-28 text-wishblack">
+      <div class="absolute bottom-0 left-[7.2%] top-0 w-px bg-black/10"></div>
+      <div class="absolute left-[9vw] top-8 text-[9px] tracking-[3px] text-wishgold">08 / PROSES</div>
+
+      <div class="mt-16 max-w-4xl">
+        <p class="mb-7 text-[9px] tracking-[3px] text-wishgold">CARA KERJA</p>
+        <h2 class="font-serifWish text-[clamp(38px,5vw,76px)] font-normal leading-none">Lima langkah, satu benang<br>yang <em class="text-wishgold">sama.</em></h2>
+      </div>
+
+      <div class="mt-14 grid max-w-7xl border-t border-black/10 md:grid-cols-5">
+        <article class="border-b border-black/10 py-7 md:border-b-0 md:border-r md:pr-5">
+          <strong class="font-serifWish text-3xl text-wishgold">01</strong><span class="mt-8 block text-[8px] tracking-[2px] text-wishgold">DISCOVER</span><h3 class="mt-3 font-serifWish text-2xl">Kenali</h3><p class="mt-2 text-xs text-[#716d65]">Kami mempelajari bisnis, brand, target audiens, dan tujuan website Anda secara menyeluruh.</p>
+        </article>
+        <article class="border-b border-black/10 py-7 md:border-b-0 md:border-r md:px-5">
+          <strong class="font-serifWish text-3xl text-wishgold">02</strong><span class="mt-8 block text-[8px] tracking-[2px] text-wishgold">DEFINE</span><h3 class="mt-3 font-serifWish text-2xl">Rumuskan</h3><p class="mt-2 text-xs text-[#716d65]">Menentukan arah strategi, konsep, struktur, dan pengalaman yang ingin dibangun bersama.</p>
+        </article>
+        <article class="border-b border-black/10 py-7 md:border-b-0 md:border-r md:px-5">
+          <strong class="font-serifWish text-3xl text-wishgold">03</strong><span class="mt-8 block text-[8px] tracking-[2px] text-wishgold">DESIGN</span><h3 class="mt-3 font-serifWish text-2xl">Rancang</h3><p class="mt-2 text-xs text-[#716d65]">Mengubah strategi menjadi visual experience yang memiliki karakter dan cerita.</p>
+        </article>
+        <article class="border-b border-black/10 py-7 md:border-b-0 md:border-r md:px-5">
+          <strong class="font-serifWish text-3xl text-wishgold">04</strong><span class="mt-8 block text-[8px] tracking-[2px] text-wishgold">DEVELOP</span><h3 class="mt-3 font-serifWish text-2xl">Bangun</h3><p class="mt-2 text-xs text-[#716d65]">Membangun desain menjadi website yang responsive, cepat, dan fungsional.</p>
+        </article>
+        <article class="py-7 md:pl-5">
+          <strong class="font-serifWish text-3xl text-wishgold">05</strong><span class="mt-8 block text-[8px] tracking-[2px] text-wishgold">REFINE</span><h3 class="mt-3 font-serifWish text-2xl">Sempurnakan</h3><p class="mt-2 text-xs text-[#716d65]">Melakukan testing dan penyempurnaan hingga website siap diluncurkan.</p>
+        </article>
+      </div>
+
+      <div class="absolute bottom-8 left-[9vw] right-[9vw] flex justify-between text-[8px] tracking-[3px] text-[#716d65]">
+        <span>PROCESS</span><span>09 — 15</span>
+      </div>
+    </section>
+
+    <!-- SELECTED WORKS -->
+    <section id="works" class="relative min-h-screen overflow-hidden bg-wishblack px-[9vw] pb-24 pt-28">
+      <div class="absolute bottom-0 left-[7.2%] top-0 w-px bg-white/[0.09]"></div>
+      <div class="absolute left-[9vw] top-8 text-[9px] tracking-[3px] text-wishgold">09 / KARYA PILIHAN</div>
+
+      <div class="mt-16 max-w-4xl">
+        <p class="mb-7 text-[9px] tracking-[3px] text-wishgold">SELECTED WORKS</p>
+        <h2 class="font-serifWish text-[clamp(38px,5vw,76px)] font-normal leading-none">One project.<br><em class="text-wishgold">Three sides of the story.</em></h2>
+      </div>
+
+      <article class="mt-14 max-w-6xl">
+        <div class="relative h-[260px] overflow-hidden border border-white/10 bg-gradient-to-br from-[#511d29] to-[#171316] md:h-[390px]">
+          <div class="h-6 border-b border-white/10 px-3 pt-2">
+            <i class="mr-1 inline-block h-1 w-1 rounded-full bg-wishgold"></i>
+            <i class="mr-1 inline-block h-1 w-1 rounded-full bg-wishgold"></i>
+            <i class="inline-block h-1 w-1 rounded-full bg-wishgold"></i>
+          </div>
+          <div class="absolute left-[8%] top-[27%] font-serifWish text-5xl md:text-7xl">ORINS</div>
+          <div class="absolute bottom-[9%] right-[8%] h-[40%] w-[26%] border border-white/10 bg-gradient-to-br from-[#b38a50] to-[#191714]"></div>
+          <div class="absolute bottom-[9%] right-[3%] h-[40%] w-[4%] border border-white/10 opacity-70"></div>
+        </div>
+
+        <div class="border-b border-white/10 py-5">
+          <span class="block font-serifWish text-xl md:text-2xl">ORINS — DIGITAL COMPANY PROFILE</span>
+          <small class="text-[8px] tracking-[2px] text-wishgold">Corporate · Company Profile Website</small>
+        </div>
+
+        <div class="grid gap-10 pt-7 md:grid-cols-3">
+          <div><span class="text-[8px] tracking-[2.5px] text-wishgold">THE CHALLENGE</span><p class="mt-3 text-sm text-[#979189]">Menciptakan pengalaman digital yang mencerminkan skala, kredibilitas, dan arah brand yang lebih modern.</p></div>
+          <div><span class="text-[8px] tracking-[2.5px] text-wishgold">OUR APPROACH</span><p class="mt-3 text-sm text-[#979189]">Menyusun ulang struktur informasi dan bahasa visual agar selaras dengan posisi brand di industrinya.</p></div>
+          <div><span class="text-[8px] tracking-[2.5px] text-wishgold">THE RESULT</span><p class="mt-3 text-sm text-[#979189]">Website company profile yang tampil lebih premium, kredibel, dan mudah diingat oleh klien maupun mitra.</p></div>
+        </div>
+      </article>
+
+      <p class="mt-16 text-[9px] text-[#6f6a62]">* Halaman studi kasus dapat diganti dengan screenshot dan hasil project Wishline yang sesungguhnya.</p>
+
+      <div class="absolute bottom-8 left-[9vw] right-[9vw] flex justify-between text-[8px] tracking-[3px] text-[#8f8a80]">
+        <span>SELECTED WORKS</span><span>10 — 15</span>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="relative min-h-screen overflow-hidden bg-wishcream px-[9vw] pb-24 pt-28 text-wishblack">
+      <div class="absolute bottom-0 left-[7.2%] top-0 w-px bg-black/10"></div>
+      <div class="absolute left-[9vw] top-8 text-[9px] tracking-[3px] text-wishgold">10 / INDUSTRI</div>
+
+      <div class="mx-auto mt-16 max-w-5xl text-center">
+        <p class="mb-7 text-[9px] tracking-[3px] text-wishgold">UNTUK SIAPA KAMI BEKERJA</p>
+        <h2 class="font-serifWish text-[clamp(40px,5vw,72px)] font-normal leading-tight">Untuk brand yang menolak<br>untuk <em class="text-wishgold">biasa-biasa saja.</em></h2>
+        <blockquote class="mx-auto mt-12 max-w-2xl border-l border-wishgold pl-6 text-left font-serifWish text-2xl">
+          “Selama brand Anda punya cerita yang layak diceritakan, kami punya cara untuk merangkainya.”
+        </blockquote>
+      </div>
+
+      <div class="mx-auto mt-16 flex max-w-4xl flex-wrap justify-center gap-3">
+        <span class="rounded-full border border-black/15 px-4 py-3 font-serifWish text-base">Corporate & Enterprise</span>
+        <span class="rounded-full border border-black/15 px-4 py-3 font-serifWish text-base">Technology</span>
+        <span class="rounded-full border border-black/15 px-4 py-3 font-serifWish text-base">Fashion & Lifestyle</span>
+        <span class="rounded-full border border-black/15 px-4 py-3 font-serifWish text-base">Food & Beverage</span>
+        <span class="rounded-full border border-black/15 px-4 py-3 font-serifWish text-base">Creative Brands</span>
+        <span class="rounded-full border border-black/15 px-4 py-3 font-serifWish text-base">Startups</span>
+        <span class="rounded-full border border-black/15 px-4 py-3 font-serifWish text-base">Personal Brands</span>
+        <span class="rounded-full border border-black/15 px-4 py-3 font-serifWish text-base">Hospitality</span>
+        <span class="rounded-full border border-black/15 px-4 py-3 font-serifWish text-base">Education</span>
+      </div>
+
+      <div class="absolute bottom-8 left-[9vw] right-[9vw] flex justify-between text-[8px] tracking-[3px] text-[#716d65]">
+        <span>INDUSTRIES</span><span>11 — 15</span>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="relative flex min-h-screen items-center overflow-hidden bg-wishblack px-[9vw] pb-24 pt-28">
+      <div class="absolute bottom-0 left-[7.2%] top-0 w-px bg-white/[0.09]"></div>
+      <div class="absolute left-[9vw] top-8 text-[9px] tracking-[3px] text-wishgold">11 / FILOSOFI</div>
+
+      <div class="max-w-6xl">
+        <span class="text-[9px] tracking-[3px] text-wishgold">FILOSOFI</span>
+        <h2 class="mt-10 font-serifWish text-[clamp(42px,6vw,82px)] font-normal leading-none tracking-[-2px]">
+          Website tidak seharusnya<br>sekadar memberi tahu siapa Anda.
+        </h2>
+        <p class="mt-5 font-serifWish text-[clamp(30px,4vw,55px)] italic text-[#a39d94]">
+          Ia harus membuat orang <em class="text-wishgold">merasakannya.</em>
+        </p>
+      </div>
+
+      <div class="absolute bottom-8 left-[9vw] right-[9vw] flex justify-between text-[8px] tracking-[3px] text-[#8f8a80]">
+        <span>PHILOSOPHY</span><span>12 — 15</span>
+      </div>
+    </section>
+
+    <!-- MOMENTUM -->
+    <section class="relative min-h-screen overflow-hidden bg-wishcream px-[9vw] pb-24 pt-28 text-wishblack">
+      <div class="absolute bottom-0 left-[7.2%] top-0 w-px bg-black/10"></div>
+      <div class="absolute left-[9vw] top-8 text-[9px] tracking-[3px] text-wishgold">12 / MOMENTUM</div>
+
+      <div class="mx-auto mt-16 grid max-w-6xl gap-10 md:grid-cols-2 md:gap-[10vw]">
+        <div>
+          <p class="mb-7 text-[9px] tracking-[3px] text-wishgold">KENAPA SEKARANG</p>
+          <h2 class="font-serifWish text-[clamp(38px,5vw,76px)] font-normal leading-none">Kehadiran digital Anda sudah <em class="text-wishgold">berbicara.</em></h2>
+        </div>
+        <div class="text-lg leading-[1.8] text-[#5f5b54]">
+          <p class="mb-7">Pertanyaannya: apakah ia mengatakan sesuatu yang layak diingat?</p>
+          <p class="mb-7">Website adalah salah satu tempat pertama di mana calon customer, partner, atau investor mengenal perusahaan Anda. Karena itu, memiliki website saja tidak lagi cukup.</p>
+          <p>Ia perlu berarti sesuatu.</p>
+        </div>
+      </div>
+
+      <div class="absolute bottom-8 left-[9vw] right-[9vw] flex justify-between text-[8px] tracking-[3px] text-[#716d65]">
+        <span>MOMENTUM</span><span>13 — 15</span>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="relative min-h-screen overflow-hidden bg-wishblack px-[9vw] pb-24 pt-28">
+      <div class="absolute bottom-0 left-[7.2%] top-0 w-px bg-white/[0.09]"></div>
+      <div class="absolute left-[9vw] top-8 text-[9px] tracking-[3px] text-wishgold">13 / MARI BEKERJA SAMA</div>
+
+      <div class="mx-auto mt-16 max-w-6xl">
+        <p class="mb-7 text-[9px] tracking-[3px] text-wishgold">MARI BEKERJA SAMA</p>
+        <h2 class="font-serifWish text-[clamp(46px,7vw,95px)] font-normal leading-none tracking-[-2px]">
+          Mari ciptakan sesuatu yang<br><em class="text-wishgold">layak dikenang.</em>
+        </h2>
+        <p class="mt-7 text-base text-[#9b958c]">Punya visi? Mari ubah menjadi pengalaman.</p>
+
+        <a href="mailto:hello@wishline.studio"
+          class="mt-9 inline-flex items-center gap-10 border-b border-wishgold py-4 font-serifWish text-xl text-wishgold">
+          Mulai percakapan <span>↗</span>
+        </a>
+
+        <div class="mt-16 grid gap-7 border-t border-white/10 pt-6 sm:grid-cols-2 md:grid-cols-4">
+          <div><span class="mb-3 block text-[8px] tracking-[2px] text-wishgold">EMAIL</span><a class="text-xs text-[#b0aaa0]" href="mailto:hello@wishline.studio">hello@wishline.studio</a></div>
+          <div><span class="mb-3 block text-[8px] tracking-[2px] text-wishgold">WHATSAPP</span><a class="text-xs text-[#b0aaa0]" href="https://wa.me/" target="_blank" rel="noreferrer">+62 8xx-xxxx-xxxx</a></div>
+          <div><span class="mb-3 block text-[8px] tracking-[2px] text-wishgold">INSTAGRAM</span><a class="text-xs text-[#b0aaa0]" href="https://instagram.com/wishline.studio" target="_blank" rel="noreferrer">@wishline.studio</a></div>
+          <div><span class="mb-3 block text-[8px] tracking-[2px] text-wishgold">WEBSITE</span><a class="text-xs text-[#b0aaa0]" href="#home">wishline.studio</a></div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-8 left-[9vw] right-[9vw] flex justify-between text-[8px] tracking-[3px] text-[#8f8a80]">
+        <span>WISHLINE.STUDIO</span><span>14 — 15</span>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="flex min-h-[48vh] flex-col justify-between bg-wishcream px-[9vw] py-24 text-wishblack">
+      <div class="font-serifWish text-[clamp(70px,13vw,170px)] leading-none tracking-[-7px]">WISHLINE</div>
+      <p class="text-xs tracking-[3px]">BERBEDA KARENA DESAIN. <em class="font-serifWish tracking-normal">DIKENANG KARENA PENGALAMAN.</em></p>
+      <span class="text-[8px] tracking-[2px] text-[#716d65]">© 2026 Wishline — Creative Digital Agency</span>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
